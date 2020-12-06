@@ -24,13 +24,12 @@ class Voleur(Personnage):
         """
         print("Un voleur vous salue et tente de vous vole!")
         sac = joueur.getSac()
-        if (len(sac)== 0) :
+        if (joueur.getMoney() == 0) :
             print("Le voleur est partie bredouille")
         else :
-            randomI = random.randint(1,len(sac))
-            objet = sac[randomI-1]
-            sac.remove(objet)
-        print(objet.description() +",  a ete pris par le voleur!")
+            argentVole = random.randint(3,10)
+            joueur.debite(argentVole)
+            print(str(argentVole) + " €,  a ete pris par le voleur!")
         input()
 
     def parler(self, joueur):

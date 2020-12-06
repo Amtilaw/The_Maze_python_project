@@ -9,6 +9,7 @@ from objets.pieceKarma import PieceKarma
 from meubles.porteSortie import PorteSortie
 from personnes.boss import Boss
 from objets.piece import Piece
+from personnes.mercenaire import Mercenaire
 
 from action import ActionManager
 from actions.parler import ParlerAction
@@ -63,22 +64,23 @@ print("MENUE - \n \n Niveau du labyrinth \n facile \n moyen \n difficile")
 taille = input("#>")
 
 l = Labyrinthe(taille)
-nbPotion = 15
-nbPotionRegen = 4
-nbVoleur = 5
+nbPotion = 30
+nbPotionRegen = 10
+nbVoleur = 3
 nbPerro = 15
-nbPiece = 30
+nbPiece = 45
 nbPieceKarma = 5
+nbMercenaire = 4
 
 joueur = Joueur("X",100)
 l.deposerJoueurAleatoirement(joueur)
 # Generation de 70 potions aléatoirement
 for i in range(nbPotionRegen):
-    potion = RegenerationPotion(random.randint(1,3), 3)
+    potion = RegenerationPotion(random.randint(1,5), 3)
     l.deposerObjetAleatoirement(potion)
 
 for i in range(nbPotion):
-    potion = Potion(random.randint(1,3))
+    potion = Potion(random.randint(2,7))
     l.deposerObjetAleatoirement(potion)
 
 for i in range(nbPieceKarma):
@@ -91,6 +93,9 @@ for i in range(nbPiece):
 
 for i in range(nbPerro):
     l.deposerPersonneAleatoirement(Perroquet(random.choice(['vert','bleu','rouge','orange','jaune','rose','violet'])))
+
+for i in range(nbMercenaire):
+    l.deposerPersonneAleatoirement(Mercenaire(random.randint(1,3)))
 
 l.deposerMeubleAleatoirement(PorteSortie())
 
@@ -133,6 +138,7 @@ while True:
     joueur.perdreEnergie()
     if joueur.getEnergie() <= 0:
         print("Game Over!")
+        break
     elif joueur.getGagne() == True:
         print("Vous avez Gagne!")
         break

@@ -18,6 +18,9 @@ class Joueur:
         """ Renvoie le niveau d'énergie du joueur. """
         return self.__energie
 
+    def blesse(self, att):
+        self.__energie -= att
+
     def getMoney(self):
 
         return self.__money

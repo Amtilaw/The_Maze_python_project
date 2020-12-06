@@ -33,8 +33,8 @@ class Labyrinthe:
         :param tailleY: taille verticale du labyrinthe, en nombre de cases.
         """
         # Stockage de la taille du labyrinthe
-        self.tailleX = 0
-        self.tailleY = 0
+        self.tailleX = 10
+        self.tailleY = 10
 
         self.genererLabyrinthe(niveau)
 

@@ -18,7 +18,7 @@ class PieceKarma(ObjetRamassable):
     def utiliser(self, joueur):
 
         self.giveRandomItem(joueur)
-        self.duration -= random.randint(1,3) #la résistance perd des point en fx de la chance
+        self.duration -= random.randint(1,3) #la résistance perd des point en fx du hasard
         if self.duration > 0:
             joueur.mettreObjetDansLeSac(self)
         else:
@@ -36,7 +36,7 @@ class PieceKarma(ObjetRamassable):
         elif rand == 3:
             argentRand = random.randint(3,10)
             joueur.credite(argentRand)
-            print("De largent !"+ str(argentRand) + " €")
+            print("De largent ! "+ str(argentRand) + " €")
         if rand != 3: joueur.mettreObjetDansLeSac(obj)
         input()
 

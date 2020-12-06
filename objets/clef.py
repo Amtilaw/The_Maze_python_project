@@ -1,4 +1,5 @@
 from objet import ObjetRamassable
+from actions.interact import InteractAction
 
 class Clef(ObjetRamassable):
     """ Représente une clef qui ouvre la porte de sortie. """
@@ -9,9 +10,7 @@ class Clef(ObjetRamassable):
     def utiliser(self, joueur):
         meubles = joueur.getCaseCourante().getMeubles()
         if (len(meubles) > 0):
-            for i in range(0, len(meubles)):
-                if (meubles[i].description() == "Porte fermé menant à une destination inconue"):
-                    print("Gagné!")
+                InteractAction(joueur)
 
     def description(self):
         return "Clef qui ouvre une porte"
