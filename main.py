@@ -115,7 +115,7 @@ for i in range(nbMercenaire):
 
 l.deposerMeubleAleatoirement(PorteSortie())
 
-l.deposerPersonneSurPersonnage(Boss(0))
+l.deposerPersonneSurPersonnage(Boss(50))
 
 # Ajouter des perroquets un peu partout
 for i in range(nbVoleur):
