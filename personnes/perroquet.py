@@ -17,9 +17,9 @@ class Perroquet(Personnage):
 
     def rencontrer(self, joueur):
         """ Affiche un message de salutation au joueur.
-        TODO: on pourrait avoir un message de salutation plus varié en le tirant aléatoirement ici, ou dans le constructeur pour qu'un même perroquet salue toujours de la même façon.
         """
-        print("Un perroquet "+self._couleur+" vous salue bien bas")
+        print("Un perroquet "+self._couleur+" : ")
+        print(message())
         input()
 
     def parler(self, joueur):
@@ -33,3 +33,18 @@ class Perroquet(Personnage):
             else:
                 repetition += lettre # Si ce n'est pas une voyelle, on ne la répète qu'une fois
         print(repetition)
+
+#choisi un message aleatoire dans le fichier message.txt
+def message():
+    file1 = open("message.txt", "r")
+    Lines = file1.read().splitlines()
+    count = 0
+    for line in Lines:
+        count += 1
+    msgIndex = random.randint(0,count)
+    count = 0
+    for line in Lines:
+        if msgIndex == count:
+            return line
+        count += 1
+    return "Bonjour"

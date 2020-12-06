@@ -59,39 +59,19 @@ cls()
 # Création des objets
 # TODO: récupérer les attributs via un menu de configuration
 
-print("MENUE - \n \n Niveau du labyrinth \n faible \n moyen \n fort")
+print("MENUE - \n \n Niveau du labyrinth \n facile \n moyen \n difficile")
 taille = input("#>")
-if (taille == "faible"):
-    l = Labyrinthe(10,5)
-    nbPotion = 30
-    nbPotionRegen = 10
-    nbVoleur = 16
-    nbPerro = 10
-    nbPiece = 30
-elif (taille == "moyen"):
-    l = Labyrinthe(20,10)
-    nbPotion = 60
-    nbPotionRegen = 20
-    nbVoleur = 30
-    nbPerro = 35
-    nbPiece = 60
-elif (taille == "fort"):
-    l = Labyrinthe(30,15)
-    nbPotion = 70
-    nbPotionRegen = 35
-    nbVoleur = 45
-    nbPerro = 47
-    nbPiece = 80
-else:
-    l = Labyrinthe(20, 10)
-    nbPotion = 30
-    nbPotionRegen = 10
-    nbVoleur = 16
-    nbPerro = 16
-    nbPiece = 30
+
+l = Labyrinthe(taille)
+nbPotion = 15
+nbPotionRegen = 4
+nbVoleur = 5
+nbPerro = 15
+nbPiece = 30
+nbPieceKarma = 5
+
 joueur = Joueur("X",100)
 l.deposerJoueurAleatoirement(joueur)
-nbPieceKarma = 80
 # Generation de 70 potions aléatoirement
 for i in range(nbPotionRegen):
     potion = RegenerationPotion(random.randint(1,3), 3)
@@ -114,7 +94,7 @@ for i in range(nbPerro):
 
 l.deposerMeubleAleatoirement(PorteSortie())
 
-l.deposerPersonneSurPersonnage(Boss(0))
+l.deposerPersonneSurPersonnage(Boss(50))
 
 # Ajouter des perroquets un peu partout
 for i in range(nbVoleur):
@@ -151,3 +131,9 @@ while True:
     actionManager.executerEntreeUtilisateur(choix)
 
     joueur.perdreEnergie()
+    if joueur.getEnergie() <= 0:
+        print("Game Over!")
+    elif joueur.getGagne() == True:
+        print("Vous avez Gagne!")
+        break
+

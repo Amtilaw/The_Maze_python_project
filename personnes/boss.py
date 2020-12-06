@@ -16,8 +16,7 @@ class Boss(Personnage):
         return "Le boss du labyrinth vend une clef a  " + self._prix_clef
 
     def rencontrer(self, joueur):
-        """ Affiche un message de salutation au joueur.
-        TODO: on pourrait avoir un message de salutation plus varié en le tirant aléatoirement ici, ou dans le constructeur pour qu'un même perroquet salue toujours de la même façon.
+        """ Affiche un message de salutation au joueur et lui explique la quête.
         """
         print("Je suis le Boss de se labyrinth, reviens vers moi quand tu as trouver "+ str(self._prix_clef) + " $")
         input()
@@ -32,3 +31,5 @@ class Boss(Personnage):
             joueur.debite(self._prix_clef)
             joueur.mettreObjetDansLeSac(clef_sortie)
             input()
+        else:
+            print("Tu na pas assez d'argent il te manque"+ str(self._prix_clef - joueur.getMoney()))

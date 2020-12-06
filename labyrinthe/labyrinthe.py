@@ -9,22 +9,34 @@ class Labyrinthe:
     Utiliser cette classe pour générer le labyrinthe et le personnaliser en y ajoutant des objets, personnages, et un joueur.
     """
 
-    @staticmethod
-    def genererLabyrinthe():
+    def genererLabyrinthe(self,niveau):
         """ Méthode statique qui permet de générer un Labyrinthe aux dimensions paramétrées du jeu (facile/moyen/difficile par exemple) """
         ## TODO: Mettre en place un système de paramétrage du jeu et l'utiliser ici pour renvoyer un Labyrinthe de la bonne dimension.
         ## Ex.: facile : 10x10, moyen : 20x20, difficile : 20x40
-        pass
+        if (niveau == "facile"):
+            self.tailleX = 10
+            self.tailleY = 10
+        elif niveau == "moyen":
+            self.tailleX = 15
+            self.tailleY = 15
+        elif niveau == "difficile":
+            self.tailleX = 25
+            self.tailleY = 25
+        else:
+            self.tailleX = 15
+            self.tailleY = 15
 
-    def __init__(self,tailleX, tailleY):
+    def __init__(self,niveau):
         """
         Construit un Labyrinthe de taille déterminée, en générant aléatoirement les chemins.
         :param tailleX: taille horizontale du labyrinthe, en nombre de cases
         :param tailleY: taille verticale du labyrinthe, en nombre de cases.
         """
         # Stockage de la taille du labyrinthe
-        self.tailleX = tailleX
-        self.tailleY = tailleY
+        self.tailleX = 0
+        self.tailleY = 0
+
+        self.genererLabyrinthe(niveau)
 
         # Initialisation des cases (toutes fermées par défaut
         self.cases = []

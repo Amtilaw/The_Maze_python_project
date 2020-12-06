@@ -10,7 +10,7 @@ class Clef(ObjetRamassable):
         meubles = joueur.getCaseCourante().getMeubles()
         if (len(meubles) > 0):
             for i in range(0, len(meubles)):
-                if (meubles[i].description() == self.clefPorte):
+                if (meubles[i].description() == "Porte fermé menant à une destination inconue"):
                     print("Gagné!")
 
     def description(self):

@@ -12,6 +12,7 @@ class Joueur:
         self._sac = [] # On commence avec un sac vide
         self.setEnergie(energieInitiale)
         self.regenDuree = [0, 0]
+        self.__gagne = False
 
     def getEnergie(self):
         """ Renvoie le niveau d'énergie du joueur. """
@@ -36,6 +37,7 @@ class Joueur:
     def perdreEnergie(self):
         """ Retire un point d'énergie au joueur. """
         self.__energie -= 1
+
 
     def gagnerEnergie(self, combien):
         """ Ajoute de l'énergie au joueur. Paramètres :
@@ -76,8 +78,6 @@ class Joueur:
 
     def getSymbole(self):
         return self.__symbole
-
-
 
     def avancerNord(self):
         caseCourante = self.__caseCourante
@@ -121,3 +121,11 @@ class Joueur:
             self.regenDuree[0] -= 1
             if (self.regenDuree[0] == 0):
                 self.regenDuree[1] = 0
+    def setGagne(self):
+        if self.__gagne:
+            self.__gagne = False
+        else:
+            self.__gagne = True
+
+    def getGagne(self):
+        return self.__gagne

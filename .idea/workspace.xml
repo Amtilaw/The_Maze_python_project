@@ -20,18 +20,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d7790b3e-ddff-4bf2-a349-94e12e3ff21e" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/themaze.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/themaze.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/actions/ramasser.py" beforeDir="false" afterPath="$PROJECT_DIR$/actions/ramasser.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/actions/sac.py" beforeDir="false" afterPath="$PROJECT_DIR$/actions/sac.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/joueur.py" beforeDir="false" afterPath="$PROJECT_DIR$/joueur.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/labyrinthe/labyrinthe.py" beforeDir="false" afterPath="$PROJECT_DIR$/labyrinthe/labyrinthe.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/meubles/porteSortie.py" beforeDir="false" afterPath="$PROJECT_DIR$/meubles/porteSortie.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/objets/clef.py" beforeDir="false" afterPath="$PROJECT_DIR$/objets/clef.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/objets/piece.py" beforeDir="false" afterPath="$PROJECT_DIR$/objets/piece.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/objets/pieceKarma.py" beforeDir="false" afterPath="$PROJECT_DIR$/objets/pieceKarma.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/objets/regenerationPotion.py" beforeDir="false" afterPath="$PROJECT_DIR$/objets/regenerationPotion.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/personnes/boss.py" beforeDir="false" afterPath="$PROJECT_DIR$/personnes/boss.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/personnes/perroquet.py" beforeDir="false" afterPath="$PROJECT_DIR$/personnes/perroquet.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -116,6 +114,10 @@
       <screen x="0" y="0" width="1600" height="870" />
     </state>
     <state x="254" y="94" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1600.870/1600.0.1280.994@0.0.1600.870" timestamp="1602193505699" />
+    <state x="421" y="96" key="FileChooserDialogImpl" timestamp="1607255835331">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state x="421" y="96" key="FileChooserDialogImpl/0.0.1280.680@0.0.1280.680" timestamp="1607255835331" />
     <state width="1281" height="940" key="GridCell.Tab.0.bottom" timestamp="1602653745341">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
