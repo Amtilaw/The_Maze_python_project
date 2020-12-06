@@ -57,7 +57,7 @@ cls()
 
 
 # Création des objets
-# TODO: récupérer les attributs via un menu de configuration
+# TODO: récupérer les attributs via un menu de configuration FAIT
 
 print("MENUE - \n \n Niveau du labyrinth \n facile \n moyen \n difficile")
 taille = input("#>")
@@ -100,7 +100,7 @@ l.deposerPersonneSurPersonnage(Boss(50))
 for i in range(nbVoleur):
     # l.deposerPersonneAleatoirement(Perroquet(random.choice(['vert','bleu','rouge','orange','jaune','rose','violet'])))
     l.deposerPersonneAleatoirement(Voleur())
-
+# TODO : factoryMaker Fait
 actionManager = ActionManager()
 actionManager.registerCommand("parler",ParlerAction(joueur))
 actionManager.registerCommand("regarder",RegarderAction(joueur))

@@ -35,6 +35,7 @@ class Perroquet(Personnage):
         print(repetition)
 
 #choisi un message aleatoire dans le fichier message.txt
+#TODO : message aleatoire fait
 def message():
     file1 = open("message.txt", "r")
     Lines = file1.read().splitlines()
