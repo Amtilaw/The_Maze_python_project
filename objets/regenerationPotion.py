@@ -6,6 +6,7 @@ class RegenerationPotion(ObjetRamassable):
     def __init__(self, energie, duree):
         """ Arguments :
         - energie : la quantité d'energie récupérée lorsque l'on utilise la potion
+        - duree : le nombre de tour pendant laquelle la potion soigne le joueur
         """
         self._energie = energie
         self._duree = duree

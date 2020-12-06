@@ -9,10 +9,12 @@ class SacAction(Action):
     def execute(self, param):
         sac = self.joueur.getSac()
         if(len(sac)) == 0:
+            print(str(self.joueur.getMoney()) + " €")
             print("Le sac est vide")
             input()
         else:
             print("Le sac contient: ")
+            print(str(self.joueur.getMoney()) + " €")
             index = 0
             for obj in sac:
                 print(str(index+1)+" - "+obj.description())

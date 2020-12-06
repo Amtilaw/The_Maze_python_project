@@ -1,10 +1,10 @@
 from objet import ObjetRamassable
 
 class Clef(ObjetRamassable):
-    """ Représente une potion qui redonne de l'énergie au joueur lorsqu'il la boit. """
+    """ Représente une clef qui ouvre la porte de sortie. """
 
     def __init__(self):
-        self.clefPorte ="Porte de sortie"
+        self.clefPorte ="clef_sortie"
 
     def utiliser(self, joueur):
         meubles = joueur.getCaseCourante().getMeubles()
@@ -14,4 +14,4 @@ class Clef(ObjetRamassable):
                     print("Gagné!")
 
     def description(self):
-        return "Potion de "+str(self._energie)
+        return "Clef qui ouvre une porte"

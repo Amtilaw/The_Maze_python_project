@@ -7,6 +7,8 @@ from personnes.perroquet import Perroquet
 from personnes.voleur import Voleur
 from objets.pieceKarma import PieceKarma
 from meubles.porteSortie import PorteSortie
+from personnes.boss import Boss
+from objets.piece import Piece
 
 from action import ActionManager
 from actions.parler import ParlerAction
@@ -65,24 +67,28 @@ if (taille == "faible"):
     nbPotionRegen = 10
     nbVoleur = 16
     nbPerro = 10
+    nbPiece = 30
 elif (taille == "moyen"):
     l = Labyrinthe(20,10)
     nbPotion = 60
     nbPotionRegen = 20
     nbVoleur = 30
     nbPerro = 35
+    nbPiece = 60
 elif (taille == "fort"):
     l = Labyrinthe(30,15)
     nbPotion = 70
     nbPotionRegen = 35
     nbVoleur = 45
     nbPerro = 47
+    nbPiece = 80
 else:
     l = Labyrinthe(20, 10)
     nbPotion = 30
     nbPotionRegen = 10
     nbVoleur = 16
     nbPerro = 16
+    nbPiece = 30
 joueur = Joueur("X",100)
 l.deposerJoueurAleatoirement(joueur)
 nbPieceKarma = 80
@@ -99,10 +105,16 @@ for i in range(nbPieceKarma):
     piece = PieceKarma(random.randint(1,3))
     l.deposerObjetAleatoirement(piece)
 
+for i in range(nbPiece):
+    piece = Piece()
+    l.deposerObjetAleatoirement(piece)
+
 for i in range(nbPerro):
     l.deposerPersonneAleatoirement(Perroquet(random.choice(['vert','bleu','rouge','orange','jaune','rose','violet'])))
 
 l.deposerMeubleAleatoirement(PorteSortie())
+
+l.deposerPersonneSurPersonnage(Boss(0))
 
 # Ajouter des perroquets un peu partout
 for i in range(nbVoleur):

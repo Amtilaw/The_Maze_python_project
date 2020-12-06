@@ -1,7 +1,38 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select />
+  </component>
   <component name="ChangeListManager">
-    <list default="true" id="d7790b3e-ddff-4bf2-a349-94e12e3ff21e" name="Default Changelist" comment="" />
+    <list default="true" id="d7790b3e-ddff-4bf2-a349-94e12e3ff21e" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/actions/ramasser.py" beforeDir="false" afterPath="$PROJECT_DIR$/actions/ramasser.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/actions/sac.py" beforeDir="false" afterPath="$PROJECT_DIR$/actions/sac.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/joueur.py" beforeDir="false" afterPath="$PROJECT_DIR$/joueur.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/labyrinthe/labyrinthe.py" beforeDir="false" afterPath="$PROJECT_DIR$/labyrinthe/labyrinthe.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/meubles/porteSortie.py" beforeDir="false" afterPath="$PROJECT_DIR$/meubles/porteSortie.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/objets/clef.py" beforeDir="false" afterPath="$PROJECT_DIR$/objets/clef.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/objets/piece.py" beforeDir="false" afterPath="$PROJECT_DIR$/objets/piece.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/objets/pieceKarma.py" beforeDir="false" afterPath="$PROJECT_DIR$/objets/pieceKarma.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/objets/regenerationPotion.py" beforeDir="false" afterPath="$PROJECT_DIR$/objets/regenerationPotion.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/personnes/boss.py" beforeDir="false" afterPath="$PROJECT_DIR$/personnes/boss.py" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -14,13 +45,16 @@
       </list>
     </option>
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
   <component name="ProjectId" id="1ic1eV1HEdpsEU8T74CbRS1e9jG" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
-    <option name="showExcludedFiles" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
   </component>
   <component name="RunManager">
@@ -51,18 +85,7 @@
       </list>
     </recent_temporary>
   </component>
-  <component name="ServiceViewManager">
-    <option name="viewStates">
-      <list>
-        <serviceView>
-          <treeState>
-            <expand />
-            <select />
-          </treeState>
-        </serviceView>
-      </list>
-    </option>
-  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="SvnConfiguration">
     <configuration />
   </component>
@@ -75,6 +98,18 @@
       <updated>1602192161861</updated>
     </task>
     <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="WindowStateProjectService">
     <state x="254" y="94" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1602193505699">

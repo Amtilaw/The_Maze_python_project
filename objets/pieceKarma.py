@@ -10,7 +10,7 @@ class PieceKarma(ObjetRamassable):
 
     def __init__(self, lvl):
         """ Arguments :
-        - energie : la quantité d'energie récupérée lorsque l'on utilise la potion
+        - lvl : represente le niveau de la piece karma, plus le lvl et haut plus la piece drop dobj
         """
         self._lvl = lvl
         self.duration = 3 * lvl
@@ -23,7 +23,7 @@ class PieceKarma(ObjetRamassable):
         else:
             pass
         
-
+    #mes dans le sac du joueur un objet aleatoire
     def giveRandomItem(self, joueur):
         rand = random.randint(1,2)
         if (rand == 1):

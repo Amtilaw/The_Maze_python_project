@@ -13,8 +13,12 @@ class RamasserAction(Action):
         else:
             print("J'ai ramassé :")
             for objet in case.getObjets():
-                objet.ramasser(self.joueur)
                 print(" - " + objet.description())
+                if objet.description() == "piece":
+                    print("+ "+str(objet.value)+ " € !")
+                    self.joueur.credite(objet.value)
+                else:
+                    objet.ramasser(self.joueur)
             case.getObjets().clear() # On est obliger de tout supprimer après avoir ramassé, car on ne peut pas modifier la liste sur laquelle on itere...
         input()
 

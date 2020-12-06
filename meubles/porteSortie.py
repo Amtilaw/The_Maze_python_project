@@ -5,7 +5,7 @@ class PorteSortie(Meuble):
 
     def __init__(self):
         """ Arguments :
-        - energie : la quantité d'energie récupérée lorsque l'on utilise la potion
+
         """
         self._forme = "8"
 

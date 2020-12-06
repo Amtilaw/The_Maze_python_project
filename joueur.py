@@ -8,6 +8,7 @@ class Joueur:
         self.__symbole = symbole
         self.__energieMax = 70 # TODO: mettre le niveau d'énergie max en fonction du paramétrage du jeu
         self.__energie = 0
+        self.__money = 0
         self._sac = [] # On commence avec un sac vide
         self.setEnergie(energieInitiale)
         self.regenDuree = [0, 0]
@@ -15,6 +16,17 @@ class Joueur:
     def getEnergie(self):
         """ Renvoie le niveau d'énergie du joueur. """
         return self.__energie
+
+    def getMoney(self):
+
+        return self.__money
+
+    def debite(self, valeur):
+
+        self.__money -= valeur
+
+    def credite(self, valeur):
+        self.__money += valeur
 
 
     def setEnergie(self,valeur):
