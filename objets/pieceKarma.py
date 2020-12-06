@@ -16,21 +16,29 @@ class PieceKarma(ObjetRamassable):
         self.duration = 3 * lvl
 
     def utiliser(self, joueur):
-        if (self.duration > 1):
-            self.giveRandomItem(joueur)
-            self.duration -= random.randint(1,3) #la résistance perd des point en fx de la chance
+
+        self.giveRandomItem(joueur)
+        self.duration -= random.randint(1,3) #la résistance perd des point en fx de la chance
+        if self.duration > 0:
             joueur.mettreObjetDansLeSac(self)
         else:
             pass
         
     #mes dans le sac du joueur un objet aleatoire
     def giveRandomItem(self, joueur):
-        rand = random.randint(1,2)
-        if (rand == 1):
-            potion = RegenerationPotion(random.randint(1,6), 3)
+        rand = random.randint(1,3)
+        if rand == 1:
+            obj = RegenerationPotion(random.randint(1,6), 3)
+            print("Une potion de regen ! Une !")
         elif rand == 2:
-            potion = Potion(random.randint(1,11))
-        joueur.mettreObjetDansLeSac(potion)
+            obj = Potion(random.randint(1,11))
+            print("Une potion ! Une !")
+        elif rand == 3:
+            argentRand = random.randint(3,10)
+            joueur.credite(argentRand)
+            print("De largent !"+ str(argentRand) + " €")
+        if rand != 3: joueur.mettreObjetDansLeSac(obj)
+        input()
 
 
 
