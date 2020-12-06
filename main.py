@@ -10,6 +10,9 @@ from meubles.porteSortie import PorteSortie
 from personnes.boss import Boss
 from objets.piece import Piece
 from personnes.mercenaire import Mercenaire
+from personnes.guerisseur import Guerisseur
+from personnes.pere_noel import Pere_noel
+from objets.vie import Vie
 
 from action import ActionManager
 from actions.parler import ParlerAction
@@ -71,10 +74,23 @@ nbPerro = 15
 nbPiece = 45
 nbPieceKarma = 5
 nbMercenaire = 4
+nbPere_noel = 3
+nbGuerriseur = 5
+nbVie = 2
 
 joueur = Joueur("X",100)
 l.deposerJoueurAleatoirement(joueur)
-# Generation de 70 potions aléatoirement
+
+for i in range(nbPere_noel):
+    pere_noel = Pere_noel(3)
+    l.deposerPersonneAleatoirement(pere_noel)
+for i in range(nbVie):
+    vie = Vie()
+    l.deposerObjetAleatoirement(vie)
+for i in range(nbGuerriseur):
+    guerisseur = Guerisseur(20)
+    l.deposerPersonneAleatoirement(guerisseur)
+
 for i in range(nbPotionRegen):
     potion = RegenerationPotion(random.randint(1,5), 3)
     l.deposerObjetAleatoirement(potion)
@@ -99,7 +115,7 @@ for i in range(nbMercenaire):
 
 l.deposerMeubleAleatoirement(PorteSortie())
 
-l.deposerPersonneSurPersonnage(Boss(50))
+l.deposerPersonneSurPersonnage(Boss(0))
 
 # Ajouter des perroquets un peu partout
 for i in range(nbVoleur):
@@ -137,8 +153,13 @@ while True:
 
     joueur.perdreEnergie()
     if joueur.getEnergie() <= 0:
-        print("Game Over!")
-        break
+        for obj in joueur.getSac():
+            if obj.description() == "Vous ressusite quand vous mourez":
+                joueur.setEnergie(30)
+                joueur.getSac().remove(obj)
+        if joueur.getEnergie() <= 0:
+            print("Game Over!")
+            break
     elif joueur.getGagne() == True:
         print("Vous avez Gagne!")
         break

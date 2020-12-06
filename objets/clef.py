@@ -10,7 +10,7 @@ class Clef(ObjetRamassable):
     def utiliser(self, joueur):
         meubles = joueur.getCaseCourante().getMeubles()
         if (len(meubles) > 0):
-                InteractAction(joueur)
+                InteractAction(joueur).execute()
 
     def description(self):
         return "Clef qui ouvre une porte"

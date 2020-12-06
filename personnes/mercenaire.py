@@ -26,12 +26,3 @@ class Mercenaire(Personnage):
     def parler(self, joueur):
         """ Le boss demande au joueur si il veut acheter la clef. Si le joueur a assez il peut et obtient la clef. """
         print("Tu veut acheter la clef? o/n")
-        entree = input("#>")
-        if (entree == "o" or entree == "0" or entree == "O") and joueur.getMoney() >= self._prix_clef:
-            print("Tu as bien merite cette clef..")
-            clef_sortie = Clef()
-            joueur.debite(self._prix_clef)
-            joueur.mettreObjetDansLeSac(clef_sortie)
-            input()
-        else:
-            print("Tu na pas assez d'argent il te manque"+ str(self._prix_clef - joueur.getMoney()))
