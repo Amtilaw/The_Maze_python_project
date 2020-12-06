@@ -21,12 +21,6 @@
   <component name="ChangeListManager">
     <list default="true" id="d7790b3e-ddff-4bf2-a349-94e12e3ff21e" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/objets/clef.py" beforeDir="false" afterPath="$PROJECT_DIR$/objets/clef.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/objets/vie.py" beforeDir="false" afterPath="$PROJECT_DIR$/objets/vie.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/personnes/guerisseur.py" beforeDir="false" afterPath="$PROJECT_DIR$/personnes/guerisseur.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/personnes/mercenaire.py" beforeDir="false" afterPath="$PROJECT_DIR$/personnes/mercenaire.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/personnes/pere_noel.py" beforeDir="false" afterPath="$PROJECT_DIR$/personnes/pere_noel.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
